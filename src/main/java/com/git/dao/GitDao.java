@@ -8,9 +8,14 @@ public interface GitDao {
 
 public int addUser(LoginDto login);
 
-public int addRepo(RepoDto login);
+public int addRepo(RepoDto repo);
 
 public List<RepoDto> getRepo();
 
 public List<LoginDto> getUser();
+
+
+public int deleteRepo(String repo);
+
+public Boolean login(LoginDto login);
 }

@@ -15,7 +15,7 @@ public class LoginRowMapper implements RowMapper<LoginDto> {
 	public LoginDto mapRow(ResultSet rs, int rowNum) throws SQLException {
 		LoginDto login =new LoginDto();
 		login.setEmail(rs.getString("Email"));
-		login.setUserName(rs.getString("UserName"));
+		login.setUsername(rs.getString("UserName"));
 
 	
 		return login;

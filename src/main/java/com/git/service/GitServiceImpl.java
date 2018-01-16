@@ -19,7 +19,12 @@ public class GitServiceImpl implements GitService {
 		// TODO Auto-generated method stub
 		return gitDao.addUser(login);
 	}
-
+	public Boolean getLogin(LoginDto login) {
+		// TODO Auto-generated method stub
+		System.out.println("service login "+login.getEmail()+" password "+login.getUsername());
+		return gitDao.login(login);
+		
+	}
 	@Override
 	public List<LoginDto> getAllUsers() {
 		// TODO Auto-generated method stub
@@ -43,5 +48,12 @@ public class GitServiceImpl implements GitService {
 		// TODO Auto-generated method stub
 		return gitDao.addRepo(repo);
 	}
+	
+	@Override
+	public int deleteRepo(String repo) {
+		// TODO Auto-generated method stub
+		return gitDao.deleteRepo(repo);
+	}
 
+	
 }
